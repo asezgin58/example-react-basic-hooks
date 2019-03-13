@@ -1,0 +1,13 @@
+.l-container {
+  margin: 0 auto;
+  border: 1px solid blue;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 10px;
+}
+
+.l-btn {
+  font-weight: bold;
+  cursor: pointer;
+}

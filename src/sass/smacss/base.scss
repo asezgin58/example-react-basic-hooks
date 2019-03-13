@@ -1,0 +1,16 @@
+@import 'partials/_radius.scss';
+@import 'partials/_width.scss';
+
+body {
+  font: {
+    family: "Lucida Sans";
+  }
+}
+
+p {
+  font: {
+    weight: bold;
+    style: italic;
+    size: 20px;
+  }
+}
