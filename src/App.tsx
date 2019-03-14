@@ -9,12 +9,12 @@ function App(props: any): any {
 
     const refData: any = useRef(0);
 
-    //One time
+    //Once
     useEffect(() => {
         console.log("Props : ", props);
     }, []);
 
-    //More Time
+    //More Times
     useEffect(() => {
         console.log(`- PropsValue: ${props.value}  || - Data : ${val}  || - RefData : ${refData.current}`);
 
