@@ -1,10 +1,11 @@
-#React Basic Hooks
+# React Basic Hooks
 * State Hook - useState()
 * Effect Hook - useState()
 * Reference Hook - useRef()
 * Custom Hook
+* Props Use
 
-##State Hook - useState()
+## State Hook - useState()
 >param1 : represents a variable => param1= VariableName
 
 >param2 : represents a set function for param1 => |
@@ -20,7 +21,7 @@ For Example;
 const [name, setName] = useState('Aykut');
 ```
 
-##Effect Hook - useEffect()
+## Effect Hook - useEffect()
 * Effect hook represent three lifecycle.
 >useEffect = ComponentDidMount + ComponentDidUpdate + ComponentWillUnMount
 
@@ -55,7 +56,7 @@ useEffect(() => {
 }, []);
 ```
 
-##Reference Hook - useRef()
+## Reference Hook - useRef()
 
 * It allows a variable to be represented.
 
@@ -68,7 +69,7 @@ const refData = useRef(initialValue); // InitialValue can be empty.
 refData.current = 5;
 ````
 
-##Custom Hook - useInterval()
+## Custom Hook - useInterval()
 
 ````javascript
 import {useEffect} from 'react';
@@ -94,7 +95,35 @@ useInterval(() => {
 }, 1000);
 ````
 
-##Software Information
+## Props Use
+index.js
+````javascript
+import App from './App';
+
+ReactDOM.render(<App value='Hello Hooks'/>, document.getElementById('root'));
+````
+
+App.js
+````javascript
+function App(props) {    
+    return (
+        <>
+            <div>               
+                <p>Props : {JSON.stringify(props)}</p>
+                <p>PropsValue : {props.value}</p>
+            </div>
+        </>
+    );
+}
+
+export default App;
+````
+
+## View
+
+![alt text](https://i.imgur.com/S0mWuSU.png)
+
+## Software Information
  - TypeScript 
  - React 
  - Webpack 
