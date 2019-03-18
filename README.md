@@ -21,6 +21,31 @@ For Example;
 const [name, setName] = useState('Aykut');
 ```
 
+For use as an object;
+````typescript
+const [person = {
+        name: '',
+        surname: '',
+        age: 0
+    }, setPerson] = useState(null);
+
+useEffect(() => {
+    let personInfo: any = {
+        name: 'Aykut',
+        surname: 'Sezgin',
+        age: 24
+    };
+
+    setPerson(personInfo);
+}, []);
+````
+
+- If we want to use as constant value
+
+````typescript
+const tryNumber = useState(58);
+````
+
 ## Effect Hook - useEffect()
 * Effect hook represent three lifecycle.
 >useEffect = ComponentDidMount + ComponentDidUpdate + ComponentWillUnMount
@@ -121,7 +146,8 @@ export default App;
 
 ## View
 
-![alt text](https://i.imgur.com/S0mWuSU.png)
+![alt text](https://i.imgur.com/gJThexF.png)
+
 
 ## Software Information
  - TypeScript 
