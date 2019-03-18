@@ -18,6 +18,9 @@ function App(props: any): any {
     //
     const [point, setPoint] = useState(val);
 
+    //list
+    const [list, setList] = useState([]);
+
     const refData: any = useRef(0);
 
     //Once
@@ -31,7 +34,6 @@ function App(props: any): any {
         };
 
         setPerson(personInfo);
-
     }, []);
 
     //More Times
@@ -48,6 +50,16 @@ function App(props: any): any {
         setTimer(timer => timer + 1);
     }, 1000);
 
+    const addList = (e: any) => {
+        e.preventDefault();
+
+        let numberVal: any = {
+            number: (val + 1) * 2
+        };
+
+        setList([...list, numberVal]);
+    };
+
     return (
         <>
             <div className='l-container md-radius'>
@@ -55,14 +67,14 @@ function App(props: any): any {
                 <div className='info q-width sm-radius'>
                     <p>Data : {val}</p>
                     <p>Point : {point}</p>
-                    <hr/>
                     <p>RefData : {refData.current}</p>
                     <hr/>
                     <p>TryNumber : {tryNumber}</p>
-                    <button className='l-btn btn-inc f-width' onClick={() => {
+                    <button className='l-btn btn-inc f-width' onClick={(e) => {
                         setVal(val + 1);
                         setPoint(val);
                         refData.current = refData.current + 3;
+                        addList(e);
                     }}>Increment
                     </button>
                 </div>
@@ -70,6 +82,8 @@ function App(props: any): any {
                 <p>Person : {JSON.stringify(person)}</p>
                 <p>Props : {JSON.stringify(props)}</p>
                 <p>PropsValue : {props.value}</p>
+                <p>List : {JSON.stringify(list)}</p>
+
             </div>
         </>
     );

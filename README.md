@@ -40,6 +40,21 @@ useEffect(() => {
 }, []);
 ````
 
+For use a list;
+````typescript
+const [list, setList] = useState([]);
+
+const addList = (e: any) => {
+        e.preventDefault();
+
+        let numberVal: any = {
+            number: (val + 1) * 2
+        };
+
+        setList([...list, numberVal]);
+    };
+````
+
 - If we want to use as constant value
 
 ````typescript
@@ -146,7 +161,7 @@ export default App;
 
 ## View
 
-![alt text](https://i.imgur.com/gJThexF.png)
+![alt text](https://i.imgur.com/zv6o8Bt.png)
 
 
 ## Software Information
